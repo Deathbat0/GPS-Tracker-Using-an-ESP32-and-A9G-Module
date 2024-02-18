@@ -108,27 +108,13 @@
     <div align="center">
         <img src="Images/Blocks.jpg" width="80%">
     </div><br>
-    <div class="container">
-    <img src="Images/App.jpg">
-    <ul>
-        <li>
-            <p>Continuing in downward order we have 4 control buttons called 'Tracking', 'Pause Tracking', 'Emergency', and 'Turn off Alarm', these four buttons send a unique character that is identified within the programming of the ESP32 so that they comply its functions.</p><br>
-            <p>Once the 'Tracking' button is activated, the ESP32 will begin to send the necessary commands to obtain the location data continuously and updating every 2 seconds until the 'Pause Tracking' button is pressed, which pauses the cycle, and leaves the prototype waiting for another indication.</p>
-        </li>
-        <li>
-            <p>In the case of the 'Emergency' button, activate the function that will continuously send text messages to a previously selected mobile number, these messages will send the location data in 2-minute periods, until the 'Turn Off Alarm' button is pressed. ' or responded to with a text message with the character 'A'.</p>
-        </li>
-    </ul>
+    <div>
+        <p>Continuing in downward order we have 4 control buttons called 'Tracking', 'Pause Tracking', 'Emergency', and 'Turn off Alarm', these four buttons send a unique character that is identified within the programming of the ESP32 so that they comply its functions.</p>
+        <p>Once the 'Tracking' button is activated, the ESP32 will begin to send the necessary commands to obtain the location data continuously and updating every 2 seconds until the 'Pause Tracking' button is pressed, which pauses the cycle, and leaves the prototype waiting for another indication.</p>
+        <p>In the case of the 'Emergency' button, activate the function that will continuously send text messages to a previously selected mobile number, these messages will send the location data in 2-minute periods, until the 'Turn Off Alarm' button is pressed. ' or responded to with a text message with the character 'A'.</p>
+    </div><br>
+    <div align = "center"><img src="Images/App.jpg"></div>
+    <br>
+    Thank you for reading the repository, I hope it will be of great help to you.
+    Don't forget to leave your little star :)
 </div>
-</div>
-
-<style>
-    .container {
-        display: flex;
-        align-items: center;
-    }
-    .container ul li{
-        list-style-type: none;
-        padding: 0;
-    }
-</style>
