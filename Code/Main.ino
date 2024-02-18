@@ -1,4 +1,4 @@
-//By Evandro Copercini - 2018
+//By Daniel Torres (DeathbatO) - 2022
 //This example creates a bridge between Serial and Classical Bluetooth (SPP)
 //Enter character for control option:
 //d : to send a message

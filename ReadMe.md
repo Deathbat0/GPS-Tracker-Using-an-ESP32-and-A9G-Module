@@ -98,3 +98,37 @@
     In addition, the A9G module must be powered with a 3.8 to 5 volt source, since the ESP32 only has a 3.3V output, it cannot be powered with this same one. Along with this point, another thing to keep in mind is that the grounds must be connected as seen in the image, the black connection.
     </p>
 </div>
+
+<div>
+    <h2>Mobile App</h2>
+    <p>The development of a simple mobile application is carried out using the virtual tool 'MIT App Inventor', in order to verify the correct functioning of the implemented codes.
+    This application has 5 buttons, the first of them called 'Connect', has the function of opening the tray of nearby Bluetooth devices to establish a connection. Followed by this button we see the information that the device returns to us.<br><br>
+    Block programming of the test application:
+    </p>
+    <div align="center">
+        <img src="Images/Blocks.jpg" width="80%">
+    </div><br>
+    <div class="container">
+    <img src="Images/App.jpg">
+    <ul>
+        <li>
+            <p>Continuing in downward order we have 4 control buttons called 'Tracking', 'Pause Tracking', 'Emergency', and 'Turn off Alarm', these four buttons send a unique character that is identified within the programming of the ESP32 so that they comply its functions.</p><br>
+            <p>Once the 'Tracking' button is activated, the ESP32 will begin to send the necessary commands to obtain the location data continuously and updating every 2 seconds until the 'Pause Tracking' button is pressed, which pauses the cycle, and leaves the prototype waiting for another indication.</p>
+        </li>
+        <li>
+            <p>In the case of the 'Emergency' button, activate the function that will continuously send text messages to a previously selected mobile number, these messages will send the location data in 2-minute periods, until the 'Turn Off Alarm' button is pressed. ' or responded to with a text message with the character 'A'.</p>
+        </li>
+    </ul>
+</div>
+</div>
+
+<style>
+    .container {
+        display: flex;
+        align-items: center;
+    }
+    .container ul li{
+        list-style-type: none;
+        padding: 0;
+    }
+</style>
