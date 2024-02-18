@@ -57,7 +57,7 @@ void ReadLocation(){
 
 void setup() {
     Serial.begin(115200);
-    SerialBT.begin("GPS_Bike"); //Bluetooth device name
+    SerialBT.begin("GPS_Traker"); //Bluetooth device name
 
     // Set SMS mode to text mode
     Serial.print("AT+CMGF=1\r");
