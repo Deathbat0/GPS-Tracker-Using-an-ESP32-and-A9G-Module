@@ -1,4 +1,4 @@
-<h1 align ="center"><b>Tracker Using an ESP32 and A9G Module</b></h1>
+<h1 align ="center"><b>GPS Tracker Using an ESP32 and A9G Module</b></h1>
 
 <div align = "center">
     <img src="Images/A9G Module.jpg" width="38.35%"><img src="Images/ESP-32.jpg" width="40%">
@@ -51,10 +51,50 @@
         • Working temperature: -30° to +80°C<br>
         • Dimensions: 41*22*5mm<br>
         • Weight: 23 grams<br>
-    </p>
-</div>
+    </p><br>
+    <p>Both modules are manufactured by the company Ai-Thinker, a Chinese company specialized in the manufacture of this type of modules with applications for IoT and wireless connections.<br><br>
+    Knowing the characteristics of each module, the programming environment was decided for each one. On the ESP32 side we have a wide variety of programming languages. In this case, programming is carried out using the Arduino IDE, and on the ESP32 side, we have a wide variety of programming languages. A9G module is programmed using AT commands, a series of simple commands that allow us to access its main functions, sent serially; The commands implemented in the job were the following:
+    </p><br>
+    <div align="center">
+    <table>
+        <tr>
+            <th>Comand</th>
+            <th>Result</th>
+        </tr>
+        <tr>
+            <td>AT+CNMI = 2,2,0,0,0</td>
+            <td>Sets the output or responses of the module on the serial port.</td>
+        </tr>
+        <tr>
+            <td>AT+GPS = 1</td>
+            <td>Enable GPS and the indicator LED starts flashing.</td>
+        </tr>
+        <tr>
+            <td>AT+GPS = 0</td>
+            <td>Deactivate the GPS, once deactivated the indicator LED turns off.</td>
+        </tr>
+        <tr>
+            <td>AT+LOCATION=1</td>
+            <td>Queries and returns location data in the form of latitude and longitude.</td>
+        </tr>
+        <tr>
+            <td>AT+CMGF = 1</td>
+            <td>Sets the format of SMS messages, changing them from hexadecimal characters to text strings.</td>
+        </tr>
+        <tr>
+            <td>AT+CMGS=“3xxxxxxxxx”</td>
+            <td>With this command you assign the phone number to which you want to send the SMS.</td>
+        </tr>
+    </table>
+    </div><br>
 <div>
     <h2>Connection diagram</h2>
-    <p>
+    <p>The connections between the modules are actually very simple, since we have to connect the ESP32 to the PC via the USB cable, which will serve as power and to send the code.
+    In order to send AT commands, we will use the serial ports of both modules, which are connected as seen in the following image:
+    </p><br>
+    <div align="center"><img src="Images/Connection Diagram.jpg" width = "80%"></div><br><br>
+    <p>As shown in the image, the TX pin of the ESP32 is connected to the RX pin of the A9G module, and the RX pin of the ESP32 is connected to the TX pin of the A9G module.
+    In other words, it is a cross connection that will allow communication between them.<br>
+    In addition, the A9G module must be powered with a 3.8 to 5 volt source, since the ESP32 only has a 3.3V output, it cannot be powered with this same one. Along with this point, another thing to keep in mind is that the grounds must be connected as seen in the image, the black connection.
     </p>
 </div>
