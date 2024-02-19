@@ -4,7 +4,7 @@
     <img src="Images/A9G Module.jpg" width="38.35%"><img src="Images/ESP-32.jpg" width="40%">
 </div>
 
-<div>
+<div align="justify">
     <h2>Description of proyect</h2>
     <p>
     A real-time tracking device will be implemented using an ESP32 and an A9G gps-gsm module, through C programming for the esp32 implementing the Arduino IDE, while the a9g module will receive its instructions (AT commands) that the esp32 sends it via serial communication, which in turn connects to a mobile application via Bluetooth.</p>
@@ -87,7 +87,7 @@
         </tr>
     </table>
     </div><br>
-<div>
+<div align="justify">
     <h2>Connection diagram</h2>
     <p>The connections between the modules are actually very simple, since we have to connect the ESP32 to the PC via the USB cable, which will serve as power and to send the code.
     In order to send AT commands, we will use the serial ports of both modules, which are connected as seen in the following image:
@@ -99,7 +99,7 @@
     </p>
 </div>
 
-<div>
+<div align="justify">
     <h2>Mobile App</h2>
     <p>The development of a simple mobile application is carried out using the virtual tool 'MIT App Inventor', in order to verify the correct functioning of the implemented codes.
     This application has 5 buttons, the first of them called 'Connect', has the function of opening the tray of nearby Bluetooth devices to establish a connection. Followed by this button we see the information that the device returns to us.<br><br>
