@@ -70,12 +70,12 @@ void setup() {
 
 void loop() {
   
-    while(m1 == true){
+    while(m1){
         ReadLocation();
         delay(200);
         break;
     }
-    while(m2 == true){
+    while(m2){
         SendMessage();
         delay(1000);
         break;
